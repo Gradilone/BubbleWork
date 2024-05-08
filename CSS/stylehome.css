@@ -10,10 +10,25 @@ body, html {
     min-height: 100vh;
 }
 .header, .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #e0e0e0;
+    color: #000000;
     padding: 20px;
     text-align: center;
+}
+
+.header{
+    font-size: 0.6rem;
+    height: fit-content;
+}
+
+.header img {
+    width: 16px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px;
+}
+
+.header h1 {
+    display: inline;
 }
 .content {
     flex: 1;
@@ -22,13 +37,21 @@ body, html {
 .aside {
     background-color: #f0f0f0;
     padding: 20px;
+    flex: 0 0 15%; 
 }
 .aside:first-child, .aside:last-child {
-    flex-basis: 20%;
+    flex-basis: 15%;
+}
+.aside:first-child {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100%; 
 }
 .main {
-    flex: 1;
-    padding: 20px;
+    flex: 1 1 70%;
+    margin-left: 225px;
+    /* padding: 20px; */
 }
 .logo {
     margin-bottom: 20px;
@@ -37,6 +60,7 @@ body, html {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    
 }
 .nav li {
     padding: 10px 0;
@@ -54,3 +78,72 @@ body, html {
 .nav-bottom {
     margin-top: 180px;
 }
+
+.nav img {
+    width: 16px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px; /* Espaço entre o ícone e o texto */
+}
+.logo img {
+    width: 180px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px;
+}
+
+.new-post {
+    max-width: 720px; /* Definindo a largura máxima do campo de postagem */
+    margin: 0 auto; /* Centralizando horizontalmente */
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 3%;
+}
+
+.post-header, .post-footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo-space {
+    width: 30px; /* Ajuste conforme necessário */
+    height: 30px; /* Ajuste conforme necessário */
+    /* Espaço reservado para o logo */
+}
+
+textarea {
+    width: 97%;
+    height: 90px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; /* Removendo a borda */
+    resize: vertical;
+    max-height: 150px;
+}
+
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background-color: #357ebd;
+}
+
+.icone {
+    width: 25px; /* Ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 5px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between; /* Alinhando o botão à direita */
+    align-items: center; /* Alinhando verticalmente ao centro */
+}
+
