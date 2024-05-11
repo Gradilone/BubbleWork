@@ -40,7 +40,7 @@ body, html {
     flex: 0 0 15%; 
 }
 .aside:first-child, .aside:last-child {
-    flex-basis: 15%;
+    flex-basis: 20%;
 }
 .aside:first-child {
     position: fixed;
@@ -97,6 +97,7 @@ body, html {
     border-radius: 10px;
     padding: 10px;
     margin-top: 3%;
+    margin-bottom: 3%;
 }
 
 .post-header, .post-footer {
@@ -122,7 +123,7 @@ textarea {
     max-height: 150px;
 }
 
-button {
+.btn-submity {
     background-color: #4a90e2;
     color: #fff;
     border: none;
@@ -145,5 +146,194 @@ button:hover {
     display: flex;
     justify-content: space-between; /* Alinhando o botão à direita */
     align-items: center; /* Alinhando verticalmente ao centro */
+}
+
+.post {
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username,
+.user-area {
+    display: inline; /* Para colocar na mesma linha */
+    margin: 0;
+}
+
+.username {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.user-area {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.user-at {
+    font-size: 12px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.post-content {
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+
+.icon {
+    width: 25px;
+    height: 23px;
+    margin-right: 50px;
+}
+
+.post-content hr {
+    border: none; /* Remove a borda padrão do elemento hr */
+    border-bottom: 1px solid #ccc; /* Adiciona uma borda inferior com cor mais clara */
+    margin: 5px 0; /* Define a margem superior e inferior */
+    width: 70%; /* Define a margem superior e inferior */
+}
+
+.post-header-view {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-type {
+    width: 13%; /* Define a largura da imagem para 50% do contêiner pai */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+.container-aside     {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    background-color: #dad9d9; /* Cor de fundo para o título */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Espaço entre o título e o campo cinza */
+}
+
+.titulo h2 {
+    font-size: 0.86rem; /* Tamanho da fonte reduzido */
+    margin: 0;
+}
+
+.campo-cinza {
+    width: 100%;/* Ajuste o tamanho conforme necessário */
+    height: auto; /* Ajuste a altura conforme necessário */
+    background-color: #ccc;
+    border-radius: 20px;
+    margin-top: 20px; /* Ajuste o raio conforme necessário */
+}
+
+.pesquisa {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ocupa a largura total do aside */
+    margin-bottom: 10px; /* Espaço entre a pesquisa e o campo cinza */
+}
+
+.pesquisa input[type="text"] {
+    width: calc(100% - 40px); /* Ocupa o restante da largura após a imagem */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.pesquisa img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    margin-right: 10px; /* Espaço entre a imagem e a barra de pesquisa */
+}
+
+.imagens img {
+    display: block;
+    margin: 10px 15px; /* Espaçamento entre as imagens */
+    width: 38%; /* Redimensiona as imagens para ocupar 100% do espaço disponível */
+     /* Espaçamento entre as imagens */
+}
+
+.contas {
+    display: block;
+    margin: 10px 15px; /* Espaçamento entre as imagens */
+    width: 90%;
+}
+
+.profile-img-mini {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username-mini {
+    font-size: 9px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.user-area-mini {
+    font-size: 9px;
+    color: #666;
+    margin: 0;
+}
+
+.user-at-mini {
+    font-size: 7px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.profile-container-mini {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    width: 50%;
+    
+}
+
+.follow-button {
+    transform: scale(0.8);
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.contas-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
