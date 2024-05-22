@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+/* Adicione estilos CSS aqui, se necessário */
+ header {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    max-height: 50px; /* Ajuste a altura conforme necessário */
+}
+.cadastre-button {
+    background: linear-gradient(to bottom, #e1dff5, #C1B7FF);
+    color: rgb(24, 24, 24);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.section {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc; /* Apenas para visualização */
+    display: flex;
+    align-items: center;
+}
+.image-container {
+    width: 150px; /* Largura fixa para o contêiner da imagem */
+    padding-right: 20px;
+}
+.image-container img {
+    width: 100%; /* Ajusta a largura da imagem para preencher o contêiner */
+    max-height: 100%;
+}
+.text-container {
+    flex: 1;
+    padding-left: 20px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+footer {
+    background-color: #C1B7FF;
+    color: rgb(24, 24, 24);             
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
