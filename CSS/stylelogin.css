@@ -32,8 +32,7 @@ main {
 }
 .section {
     flex: 1;
-    padding: 20px;
-    border: 1px solid #ccc; /* Apenas para visualização */
+    padding: 20px; /* Apenas para visualização */
     display: flex;
     align-items: center;
 }
@@ -53,6 +52,81 @@ main {
     text-align: left;
 }
 
+.login{
+    display: flex;
+    justify-content: center;
+}
+.login-container {
+    width: 100%;
+    max-width: 300px; /* Limita a largura máxima do formulário de login */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.login-container a {
+    color: #888;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.login-container .entrar-button {
+    background: #C1B7FF;
+    color: white;
+}
+.login-container .criar-conta-button {
+    background: #f0f0f0;
+    color: #333;
+}
+.login-container .social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    color: #333;
+    margin-top: 10px;
+}
+.login-container .social-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+}
+.description-container {
+    width: 60%;
+    max-width: 300px; /* Limita a largura máxima do contêiner de descrição */
+    background: linear-gradient(to bottom, #e1dff5, #C1B7FF);
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(24, 24, 24);
+    text-align: center;
+    line-height: 1.5;
+    font-size: large;
+}
 footer {
     background-color: #C1B7FF;
     color: rgb(24, 24, 24);             

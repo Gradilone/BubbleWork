@@ -21,19 +21,59 @@
                 <p>Bem vindo ao Bubblework!<br>Sua bolha na internet, nos seus critérios!</p>
             </div>
         </div>
-        <div class="section">
-            <!-- Segunda seção -->
-            <!-- Conteúdo da segunda seção aqui -->
+        <div class="section login">
+            <div class="login-container">
+                <h2 class="login-title"><strong> Acesse o Bubblework </strong></h2>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Senha">
+                <a href="#">Esqueci minha senha</a>
+                <button class="entrar-button">Entrar</button>
+                <button class="criar-conta-button">Criar conta</button>
+                <button class="social-button" onclick="handleGoogleLogin()">
+                    <img src="/Img/goggle.png" alt="Google">
+                    Conta com o Google
+                </button>
+                <button class="social-button">
+                    <img src="/Img/apple.png" alt="Apple">
+                    Conta com Apple
+                </button>
+            </div>
         </div>
-        <div class="section">
-            <!-- Terceira seção -->
-            <!-- Conteúdo da terceira seção aqui -->
+        <div class="section description">
+            <div class="description-container">
+                <p>O Bubblework é uma rede social feita para quem quer compartilhar suas experiências profissionais e acadêmicas, facilitando a localização de seus interesses através das Bubbles, um espaço separado e exclusivo para esse interesse. E você quem escolhe em quais Bubbles você quer estar!</p>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>BubbleWork© 2024 </p>
+        <p></p>
     </footer>
+
+    <script>
+        function openGoogleLoginPopup() {
+            const width = 500;
+            const height = 600;
+            const left = (screen.width - width) / 2;
+            const top = (screen.height - height) / 2;
+            const popup = window.open(
+                'https://accounts.google.com/signin/v2/identifier', // URL da página de login do Google
+                'popupWindow',
+                `width=${width},height=${height},top=${top},left=${left}`
+            );
+            if (window.focus) {
+                popup.focus();
+            }
+            return popup;
+        }
+
+        function handleGoogleLogin() {
+            const popup = openGoogleLoginPopup();
+            setTimeout(() => {
+                window.location.href = 'home.html';
+            }, 6000); // Redireciona após 6 segundos
+        }
+    </script>
     
 </body>
 </html>

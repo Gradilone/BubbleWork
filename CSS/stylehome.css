@@ -112,7 +112,15 @@ body, html {
     /* Espaço reservado para o logo */
 }
 
-textarea {
+.title-area {
+    width: 97%;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none; /* Removendo a borda */
+}
+
+.write-area {
     width: 97%;
     height: 90px;
     border-radius: 5px;
