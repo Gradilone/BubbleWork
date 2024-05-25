@@ -212,6 +212,23 @@ button:hover {
     margin-right: 50px;
 }
 
+.icon-btn {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.post-footer-view{
+    margin-left: 20px;
+}
+
+
+.like-icon.filled {
+    content: url('/Img/🦆\ icon\ _heart_.png');
+}
 .post-content hr {
     border: none; /* Remove a borda padrão do elemento hr */
     border-bottom: 1px solid #ccc; /* Adiciona uma borda inferior com cor mais clara */
@@ -343,5 +360,79 @@ p {
     align-items: center;
     justify-content: space-between;
     margin-top: 20px;
+}
+
+.comments-section {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.comment {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.comment-profile-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.comment-profile-img {
+    width: 40px; /* Tamanho menor para o avatar do comentário */
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.comment-user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-username {
+    font-weight: bold;
+    margin: 0;
+}
+
+.comment-user-area,
+.comment-user-at {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.comment-text {
+    margin-left: 50px; /* Alinha o texto do comentário com o início dos detalhes do usuário */
+}
+
+.new-comment {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.publish-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.publish-btn:hover {
+    background-color: #0056b3;
 }
 

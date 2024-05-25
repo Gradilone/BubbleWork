@@ -1,108 +1,127 @@
 document.addEventListener('DOMContentLoaded', function() {
     const postButton = document.querySelector('.btn-submity');
 
-    postButton.addEventListener('click', function(event) {
-        event.preventDefault(); // Evita o envio do formulário
+    const heartEmptySrc = "/Img/hearth_empty.png"; // Caminho do ícone de coração vazio
+    const heartFilledSrc = '/Img/hearth.png'; // Caminho do ícone de coração cheio
+    const likeButtons = document.querySelectorAll('.like-btn');
 
-        const title = document.querySelector('.title-area').value;
-        const description = document.querySelector('.write-area').value;
-
-        createNewPost(title, description);
+    likeButtons.forEach(button => {
+        const likeIcon = button.querySelector('.like-icon');
+        
+        button.addEventListener('click', function() {
+            if (likeIcon.src.includes('hearth_empty.png')) {
+                likeIcon.src = heartFilledSrc; // Troca para ícone de coração cheio
+            } else {
+                likeIcon.src = heartEmptySrc; // Troca para ícone de coração vazio
+            }
+        });
     });
 
-    function createNewPost(title, description) {
-        const newPostContainer = document.createElement('div');
-        newPostContainer.classList.add('new-post');
+     // Função para alternar a visibilidade da seção de comentários
+     const comentButtons = document.querySelectorAll('.coment-btn');
+     comentButtons.forEach(button => {
+         button.addEventListener('click', function() {
+             const post = button.closest('.new-post');
+             const commentsSection = post.querySelector('.comments-section');
+             commentsSection.classList.toggle('hidden');
+         });
+     });
 
-        const postHeaderView = document.createElement('div');
-        postHeaderView.classList.add('post-header-view');
+    const publishButton = document.querySelector('.publish-btn');
+    const commentInput = document.querySelector('.comment-input');
+    const commentsSection = document.querySelector('.comments-section');
 
-        const homeTypeImg = document.createElement('img');
-        homeTypeImg.src = '/Img/Vector.png';
-        homeTypeImg.classList.add('home-type');
-        homeTypeImg.alt = 'Imagem 1';
+    publishButton.addEventListener('click', function() {
+        const commentText = commentInput.value.trim();
 
-        const iconImg = document.createElement('img');
-        iconImg.src = '/Img/🦆 icon _setting 4_.png';
-        iconImg.classList.add('icon');
-        iconImg.alt = 'Imagem 2';
+        if (commentText) {
+            const newComment = document.createElement('div');
+            newComment.classList.add('comment');
 
-        postHeaderView.appendChild(homeTypeImg);
-        postHeaderView.appendChild(iconImg);
+            newComment.innerHTML = `
+                <div class="comment-profile-container">
+                    <img src="/Img/image 30.png" alt="Foto de Perfil" class="comment-profile-img">
+                    <div class="comment-user-details">
+                        <p class="comment-username">Você</p>
+                        <p class="comment-user-area">Designer</p>
+                        <p class="comment-user-at">@voce.silva</p>
+                    </div>
+                </div>
+                <p class="comment-text">${commentText}</p>
+            `;
 
-        const profileContainer = document.createElement('div');
-        profileContainer.classList.add('profile-container');
+            commentsSection.insertBefore(newComment, document.querySelector('.new-comment'));
+            commentInput.value = ''; // Limpa o campo de texto após adicionar o comentário
+        }
+    });
 
-        const profileImg = document.createElement('img');
-        profileImg.src = '/Img/image 30.png';
-        profileImg.alt = 'Foto de Perfil';
-        profileImg.classList.add('profile-img');
-
-        const userDetails = document.createElement('div');
-        userDetails.classList.add('user-details');
-
-        const username = document.createElement('p');
-        username.classList.add('username');
-        username.textContent = 'Lucas Garcia';
-
-        const userArea = document.createElement('p');
-        userArea.classList.add('user-area');
-        userArea.textContent = 'Design gráfico';
-
-        const userAt = document.createElement('p');
-        userAt.classList.add('user-at');
-        userAt.textContent = '@luligarcia';
-
-        userDetails.appendChild(username);
-        userDetails.appendChild(userArea);
-        userDetails.appendChild(userAt);
-
-        profileContainer.appendChild(profileImg);
-        profileContainer.appendChild(userDetails);
-
-        const postContent = document.createElement('div');
-        postContent.classList.add('post-content');
-
-        const postTitle = document.createElement('h2');
-        postTitle.textContent = title;
-
-        const hr = document.createElement('hr');
-
-        const descriptionParagraph = document.createElement('p');
-        descriptionParagraph.textContent = description;
-
-        postContent.appendChild(postTitle);
-        postContent.appendChild(hr);
-        postContent.appendChild(descriptionParagraph);
-
-        const postFooterView = document.createElement('div');
-        postFooterView.classList.add('post-footer-view');
-
-        const heartIcon = document.createElement('img');
-        heartIcon.src = '/Img/🦆 icon _heart_.png';
-        heartIcon.alt = 'Imagem 2';
-        heartIcon.classList.add('icon', 'like');
-
-        const messagesIcon = document.createElement('img');
-        messagesIcon.src = '/Img/🦆 icon _messages 2_.png';
-        messagesIcon.alt = 'Imagem 3';
-        messagesIcon.classList.add('icon', 'coment');
-
-        const sendIcon = document.createElement('img');
-        sendIcon.src = '/Img/🦆 icon _send 2_.png';
-        sendIcon.alt = 'Imagem 4';
-        sendIcon.classList.add('icon', 'send');
-
-        postFooterView.appendChild(heartIcon);
-        postFooterView.appendChild(messagesIcon);
-        postFooterView.appendChild(sendIcon);
-
-        newPostContainer.appendChild(postHeaderView);
-        newPostContainer.appendChild(profileContainer);
-        newPostContainer.appendChild(postContent);
-        newPostContainer.appendChild(postFooterView);
-
-        const postArea = document.querySelector('.post-area');
-        postArea.insertAdjacentElement('afterend', newPostContainer);
+    function createNewPost(title, body) {
+        // Verifica se o elemento pai existe
+        const postCreationSection = document.querySelector('.post-area');
+        if (!postCreationSection) {
+            console.error('Elemento pai não encontrado.');
+            return;
+        }
+    
+        // Cria uma nova estrutura de postagem
+        const newPost = document.createElement('div');
+        newPost.classList.add('new-post');
+    
+        newPost.innerHTML = `
+            <div class="post-header-view">
+                <img src="/Img/Vector.png" class="home-type" alt="Imagem 1" class="top-left-image">
+                <img src="Img/🦆 icon _setting 4_.png" class="icon" alt="Imagem 2" class="top-right-image">
+            </div>
+    
+            <div class="profile-container">
+                <img src="/Img/image 30.png" alt="Foto de Perfil" class="profile-img">
+                <div class="user-details">
+                    <p class="username">Você</p>
+                    <p class="user-area">Designer</p>
+                    <p class="user-at">@voce.silva</p>
+                </div>
+            </div>
+    
+            <div class="post-content">
+                <h2>${title}</h2>
+                <hr>
+                <p>${body}</p>
+            </div>
+    
+            <div class="post-footer-view">
+                <button class="icon-btn like-btn">
+                    <img src="/Img/hearth_empty.png" alt="Like" class="icon like-icon">
+                </button>
+                <button class="icon-btn coment-btn">
+                    <img src="/Img/🦆 icon _messages 2_.png" alt="Coment" class="icon coment-icon">
+                </button>
+                <button class="icon-btn send-btn">
+                    <img src="/Img/🦆 icon _send 2_.png" alt="Send" class="icon send-icon">
+                </button>
+            </div>
+    
+            <div class="comments-section hidden">
+                <div class="new-comment">
+                    <input type="text" class="comment-input" placeholder="Comente algo">
+                    <button class="publish-btn">Publicar</button>
+                </div>
+            </div>
+        `;
+    
+        // Adiciona a nova postagem logo abaixo do campo de criação de postagem
+        postCreationSection.parentNode.insertBefore(newPost, postCreationSection.nextSibling);
     }
+    // Evento de clique no botão "Publicar"
+    const btnPost = document.querySelector('.btn-submity');
+    btnPost.addEventListener('click', function() {
+        const title = document.querySelector('.title-area').value.trim();
+        const body = document.querySelector('.write-area').value.trim();
+
+        if (title && body) {
+            createNewPost(title, body);
+            // Limpa os campos de entrada após a publicação
+            document.querySelector('.title-area').value = '';
+            document.querySelector('.write-area').value = '';
+        }
+    });
 });
