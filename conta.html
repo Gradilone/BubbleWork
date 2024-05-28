@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/conta.css">
+    <title>Criação de conta</title>
+</head>
+<body class="wrapper">
+    <header>
+
+    </header>
+
+    <main>
+        <a href="login.html" class="back-link">
+            <img src="/Img/🦆 icon _arrow left 1_.png" alt="Seta para a esquerda" width="16" height="23">
+            Voltar
+        </a>
+        <div class="title">Criando sua conta Bubblework</div>
+        <div class="forms">
+            <form>
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Nome" aria-label="Digite seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="sobrenome">Sobrenome:</label>
+                    <input type="text" id="sobrenome" placeholder="Sobrenome" aria-label="Digite seu sobrenome">
+                </div>
+                <div class="form-group full-width">
+                    <label for="email">Endereço de email:</label>
+                    <input type="email" id="email" placeholder="Endereço de email" aria-label="Digite seu endereço de email">
+                </div>
+                <div class="form-group full-width">
+                    <label for="confirmar-email">Confirmar email:</label>
+                    <input type="email" id="confirmar-email" placeholder="Confirmar email" aria-label="Confirme seu endereço de email">
+                </div>
+                <div class="form-group full-width">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" placeholder="Senha" aria-label="Digite sua senha">
+                </div>
+                <div class="form-group full-width">
+                    <label for="confirmar-senha">Confirmar senha:</label>
+                    <input type="password" id="confirmar-senha" placeholder="Confirmar senha" aria-label="Confirme sua senha">
+                </div>
+                <fieldset class="form-group full-width">
+                    <legend class="small-text">Data de nascimento</legend>
+                    <div class="form-row">
+                        <select aria-label="Escolha o dia do seu nascimento">
+                            <!-- opções de dia -->
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>11</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+                        </select>
+                        <select aria-label="Escolha o mês do seu nascimento">
+                             <!-- opções de mês -->
+                             <option>Janeiro</option>
+                             <option>Fevereiro</option>
+                             <option>Março</option>
+                             <option>Abril</option>
+                             <option>Maio</option>
+                             <option>Junho</option>
+                             <option>Julho</option>
+                             <option>Agosto</option>
+                             <option>Setembro</option>
+                             <option>Outubro</option>
+                             <option>Novembro</option>
+                             <option>Dezembro</option>
+                        </select>
+                        <input type="text" placeholder="Ano" aria-label="Digite o ano do seu nascimento">
+                    </div>
+                </fieldset>
+            </form>
+
+            <div class="vertical-line"></div>
+    
+            <form id="form2">
+                <div class="form-group full-width">
+                    <label for="area-atuacao">Área de Atuação:</label>
+                    <input type="text" id="area-atuacao" placeholder="Área de Atuação" aria-label="Digite sua área de atuação">
+                </div>
+                <div class="form-group full-width">
+                    <label for="grau-escolaridade">Grau de Escolaridade:</label>
+                    <input type="text" id="grau-escolaridade" placeholder="Grau de Escolaridade" aria-label="Digite seu grau de escolaridade">
+                </div>
+                <div class="form-group full-width">
+                    <label for="ultima-instituicao">Nome da Última Instituição de Ensino:</label>
+                    <input type="text" id="ultima-instituicao" placeholder="Nome da Última Instituição de Ensino" aria-label="Digite o nome da última instituição de ensino">
+                </div>
+                <div class="form-group full-width">
+                    <label for="ultimo-trabalho">Nome do Último Local de Trabalho:</label>
+                    <input type="text" id="ultimo-trabalho" placeholder="Nome do Último Local de Trabalho" aria-label="Digite o nome do último local de trabalho">
+                </div>
+                <div class="form-group full-width">
+                    <label for="cargo-atual">Cargo Atual:</label>
+                    <input type="text" id="cargo-atual" placeholder="Cargo Atual" aria-label="Digite seu cargo atual">
+                </div>
+                <div class="form-group full-width">
+                    <input type="checkbox" id="aceitar-termos" aria-label="Aceitar termos de uso e privacidade">
+                    <label for="aceitar-termos">Aceitar termos de uso e privacidade</label>
+                </div>
+                <button type="button" class="button" onclick="criarConta()">Criar Conta</button>
+                <div id="mensagem" class="mensagem"></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>    
+</body>
+</html>
