@@ -17,7 +17,7 @@ header, footer {
 }
 main {
     flex: 1;
-    padding: 20px;
+    padding: 30px;
 }
 
 .back-link {
@@ -34,8 +34,8 @@ main {
 
 .title {
     font-size: 2.4rem; /* 48px based on 16px base font size */
-
     margin-top: 37px;
+    margin-bottom: 20px;
 }
 
 form {
@@ -43,7 +43,6 @@ form {
     flex-wrap: wrap;
     gap: 10px;
     padding-top: 20px;
-    border-top: 1px solid #ccc;
 }
 
 .forms {
@@ -103,3 +102,15 @@ input[type="text"], input[type="email"], input[type="password"], select {
     border: 0.9px solid #ccc;
     height: 100vh;
   }
+
+  .illustrative-image {
+    margin-left: 50px; /* Espaço considerável entre o formulário e a imagem */
+    display: flex;
+    align-items: center; /* Centraliza a imagem verticalmente dentro deste container */
+}
+
+.illustrative-image img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    width: 3400px; /* Ajuste o tamanho conforme necessário */
+}
